@@ -20,6 +20,7 @@
 
 
     <!-- Toolbar的样式 -->
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+    </style>
 
 </resources>
