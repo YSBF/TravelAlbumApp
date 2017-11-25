@@ -8,13 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <!-- MainActivity的样式  在Android 4.4之前的版本上运行，直接跟随系统主题 -->
+    <style name="TranslucentTheme" parent="AppTheme">
+        <!-- 下面两个是为了隐藏ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- AppBarLayout的样式 -->
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+
+    <!-- Toolbar的样式 -->
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

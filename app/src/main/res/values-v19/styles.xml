@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- MainActivity的样式  在Android 4.4上是渐变色 -->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 下面两个是为了隐藏ActionBar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>

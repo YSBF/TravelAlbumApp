@@ -1,8 +1,14 @@
 <resources>
 
-    <style name="AppTheme.NoActionBar">
+    <!-- MainActivity的样式  在Android 5.0上是完全透明 -->
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 下面两个是为了隐藏ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 </resources>
