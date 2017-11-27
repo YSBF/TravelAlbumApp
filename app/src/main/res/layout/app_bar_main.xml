@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/transparent"
     tools:context="code.ryan.travelalbumapp.MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/mBarlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"

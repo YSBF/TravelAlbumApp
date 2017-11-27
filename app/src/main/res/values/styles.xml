@@ -9,22 +9,22 @@
     </style>
 
     <!-- MainActivity的样式  在Android 4.4之前的版本上运行，直接跟随系统主题 -->
-    <style name="TranslucentTheme" parent="AppTheme">
-        <!-- 下面两个是为了隐藏ActionBar -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
 
     <!-- AppBarLayout的样式 -->
-    <style name="AppBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppBarTheme" parent="AppTheme">
         <item name="colorPrimary">@color/transparent</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="android:textColorPrimary">@color/black</item> <!-- Toolbar字体颜色  -->
     </style>
 
 
     <!-- ToolBar菜单样式 -->
-    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="ToolbarTheme" parent="AppTheme">
         <item name="colorPrimary">@color/transparent</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
         <item name="android:textColorPrimary">@color/black</item> <!-- Toolbar字体颜色  -->
+        <item name="colorControlNormal">@color/white</item>
     </style>
 
 </resources>

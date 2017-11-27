@@ -1,5 +1,7 @@
 package code.ryan.travelalbumapp;
 
+import android.animation.AnimatorInflater;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
@@ -14,6 +16,7 @@ import android.view.WindowManager;
 import code.ryan.utils.DimensionUtil;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private boolean isOpen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        AppBarLayout appBarLayout = findViewById(R.id.mBarlayout);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            appBarLayout.setStateListAnimator(AnimatorInflater.loadStateListAnimator(getApplicationContext(), R.animator.appbar_elevation));
+        }
     }
 
     @Override
