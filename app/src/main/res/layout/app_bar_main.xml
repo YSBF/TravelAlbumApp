@@ -3,15 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
+    android:background="@color/transparent"
     tools:context="code.ryan.travelalbumapp.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
-        app:elevation="0dp"
+        android:background="?attr/colorPrimary"
         android:theme="@style/AppBarTheme">
 
         <android.support.v7.widget.Toolbar
@@ -20,12 +20,9 @@
             android:layout_height="?attr/actionBarSize"
             android:fitsSystemWindows="true"
             android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
             android:theme="@style/ToolbarTheme" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="#666666"/>
 
     </android.support.design.widget.AppBarLayout>
 
