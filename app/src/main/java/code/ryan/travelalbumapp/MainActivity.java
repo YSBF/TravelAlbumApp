@@ -1,9 +1,6 @@
 package code.ryan.travelalbumapp;
 
-import android.animation.AnimatorInflater;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,11 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 
 import code.ryan.utils.DimensionUtil;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-    private boolean isOpen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
-        AppBarLayout.LayoutParams param = (AppBarLayout.LayoutParams) toolbar.getLayoutParams();
+        LinearLayout.LayoutParams param = (LinearLayout.LayoutParams) toolbar.getLayoutParams();
         param.setMargins(0, DimensionUtil.getStatusBarHeight(getApplicationContext()), 0, 0);
         toolbar.setLayoutParams(param);
 
@@ -39,11 +36,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        AppBarLayout appBarLayout = findViewById(R.id.mBarlayout);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            appBarLayout.setStateListAnimator(AnimatorInflater.loadStateListAnimator(getApplicationContext(), R.animator.appbar_elevation));
-        }
     }
 
     @Override
