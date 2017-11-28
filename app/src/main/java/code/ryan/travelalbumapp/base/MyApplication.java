@@ -2,7 +2,7 @@ package code.ryan.travelalbumapp.base;
 
 import android.app.Application;
 
-import com.ambits.widgetlib.WidgetLibManager;
+import com.ryan.widgetlib.WidgetLibManager;
 
 /**
  * Created by Administrator on 2017/11/28.

@@ -1,4 +1,4 @@
-package com.ambits.widgetlib;
+package com.ryan.widgetlib;
 
 import android.content.Context;
 
