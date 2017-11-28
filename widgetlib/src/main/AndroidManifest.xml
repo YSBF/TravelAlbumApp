@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ambits.widgetlib" />
+    package="com.ambits.widgetlib">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>
