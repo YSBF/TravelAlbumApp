@@ -5,7 +5,7 @@ import android.app.Application;
 import com.ryan.widgetlib.WidgetLibManager;
 
 /**
- * Created by Administrator on 2017/11/28.
+ * Created by RyanLee on 2017/11/28.
  */
 
 public class MyApplication extends Application {

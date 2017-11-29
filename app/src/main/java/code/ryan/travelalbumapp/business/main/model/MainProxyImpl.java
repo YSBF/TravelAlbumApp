@@ -4,7 +4,7 @@ import code.ryan.mvplib.model.BaseProxyImpl;
 import code.ryan.mvplib.presenter.IBasePrensenter;
 
 /**
- * Created by Administrator on 2017/11/29.
+ * Created by RyanLee on 2017/11/29.
  */
 
 public class MainProxyImpl extends BaseProxyImpl<IBasePrensenter> implements IMainProxy {

@@ -6,7 +6,7 @@ import code.ryan.travelalbumapp.business.main.model.MainProxyImpl;
 import code.ryan.travelalbumapp.business.main.view.IMainView;
 
 /**
- * Created by Administrator on 2017/11/29.
+ * Created by RyanLee on 2017/11/29.
  */
 
 public class MainpresenterImpl extends BasePresenterImpl<IMainView, IMainProxy> implements IMainPresenter{

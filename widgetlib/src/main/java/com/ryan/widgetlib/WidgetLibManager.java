@@ -5,7 +5,7 @@ import android.content.Context;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 /**
- * Created by Administrator on 2017/11/28.
+ * Created by RyanLee on 2017/11/28.
  */
 
 public class WidgetLibManager {
