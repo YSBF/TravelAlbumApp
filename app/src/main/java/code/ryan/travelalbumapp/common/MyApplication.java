@@ -1,4 +1,4 @@
-package code.ryan.travelalbumapp.base;
+package code.ryan.travelalbumapp.common;
 
 import android.app.Application;
 
@@ -13,7 +13,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        // 初始化WidgetLib
+        // init WidgetLib
         WidgetLibManager.initWidgetLib(this);
     }
 }
