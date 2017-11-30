@@ -5,4 +5,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- Navigation Menu -->
+    <string name="str_my_paper">我的画报</string>
+    <string name="str_popular_paper">精选画报</string>
+    <string name="str_advanced">高级设置</string>
+
 </resources>
