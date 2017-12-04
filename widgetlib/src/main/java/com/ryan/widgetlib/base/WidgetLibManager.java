@@ -1,4 +1,4 @@
-package com.ryan.widgetlib;
+package com.ryan.widgetlib.base;
 
 import android.content.Context;
 
