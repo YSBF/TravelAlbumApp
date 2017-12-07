@@ -3,26 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group
-        android:id="@+id/grp1"
-        android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_my_paper"
             android:icon="@drawable/ic_menu_my_paper"
             android:title="@string/str_my_paper" />
-    </group>
 
-    <group
-        android:id="@+id/grp2"
-        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_popular_paper"
             android:icon="@drawable/ic_menu_popular_paper"
             android:title="@string/str_popular_paper" />
-    </group>
-    <group
-        android:id="@+id/grp3"
-        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_advanced"
             android:icon="@drawable/ic_menu_advanced"

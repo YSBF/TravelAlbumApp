@@ -10,6 +10,6 @@
 
     <color name="transparent">#00000000</color>
 
-    <color name="color_menu_item_press">#6CC6E0</color>
-    <color name="color_menu_item_default">#dbdbdb</color>
+    <color name="color_menu_item_press">#99000000</color>
+    <color name="color_menu_item_default">#000000</color>
 </resources>

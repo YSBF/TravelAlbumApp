@@ -72,7 +72,8 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
         // 设置NavigationBar文字的颜色
         mNavigationView.setItemTextColor(csl);
         // 设置NavigationBar按钮的颜色
-        mNavigationView.setItemIconTintList(csl);
+        //mNavigationView.setItemIconTintList(csl);
+        mNavigationView.setItemIconTintList(null);
 
     }
 
