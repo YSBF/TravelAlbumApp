@@ -15,7 +15,7 @@ import code.ryan.mvplib.view.BaseActivity;
 import code.ryan.travelalbumapp.R;
 import code.ryan.travelalbumapp.business.main.presenter.IMainPresenter;
 import code.ryan.travelalbumapp.business.main.presenter.MainpresenterImpl;
-import code.ryan.utils.DimensionUtil;
+import code.screen.DimensionUtil;
 
 public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implements IMainView, NavigationView.OnNavigationItemSelectedListener {
     private Toolbar mToolbar;
