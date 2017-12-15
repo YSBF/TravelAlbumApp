@@ -27,16 +27,18 @@ def version_fresco = "1.5.0"    // fresco版本
 
 // 在gradle3.0之后，api指令取代compile（作用和compile一样）,implementation是作为闭包，外部依赖本module将无法引用该依赖
 dependencies {
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support:design:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.android.support:appcompat-v7:26.1.0"
 
     // fresco
     compile "com.facebook.fresco:fresco:${version_fresco}"
     compile "com.facebook.fresco:animated-gif:${version_fresco}"     // 支持GIF动图
     compile "com.facebook.fresco:animated-webp:${version_fresco}"    // 支持Webp动态图
     compile "com.facebook.fresco:webpsupport:${version_fresco}"      // 支持Webp静态图
+
+    compile 'com.ryan.rv_gallery:rv-gallery:1.0.1'
+
     implementation 'jp.wasabeef:blurry:2.1.1'                        // 高斯模糊
+
 
 }
 
