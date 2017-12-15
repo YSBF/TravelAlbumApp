@@ -17,7 +17,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.ryan.rv_gallery.AnimManager;
 import com.ryan.rv_gallery.GalleryRecyclerView;
@@ -28,7 +27,7 @@ import java.util.Map;
 import code.blur.BlurBitmapUtil;
 import code.ryan.mvplib.view.BaseActivity;
 import code.ryan.travelalbumapp.R;
-import code.ryan.travelalbumapp.business.main.RecyclerAdapter;
+import code.ryan.travelalbumapp.business.main.MainGalleryAdapter;
 import code.ryan.travelalbumapp.business.main.presenter.IMainPresenter;
 import code.ryan.travelalbumapp.business.main.presenter.MainpresenterImpl;
 import code.ryan.travelalbumapp.test.MainTest;
@@ -63,7 +62,7 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
     }
 
     private void setUpGallery() {
-        RecyclerAdapter adapter = new RecyclerAdapter(getApplicationContext(), MainTest.getDatas(this));
+        MainGalleryAdapter adapter = new MainGalleryAdapter(getApplicationContext(), MainTest.getDatas(this));
         mGallery.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         mGallery.setAdapter(adapter);
 
@@ -129,7 +128,7 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
      * 设置背景高斯模糊
      */
     public void setBlurImage() {
-        RecyclerAdapter adapter = (RecyclerAdapter) mGallery.getAdapter();
+        MainGalleryAdapter adapter = (MainGalleryAdapter) mGallery.getAdapter();
 
         if (adapter == null || mGallery == null) {
             return;
@@ -138,7 +137,7 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
             @Override
             public void run() {
                 // 获取当前位置的图片资源ID
-                int resourceId = ((RecyclerAdapter) mGallery.getAdapter()).getResId(mGallery.getScrolledPosition());
+                int resourceId = ((MainGalleryAdapter) mGallery.getAdapter()).getResId(mGallery.getScrolledPosition());
                 // 将该资源图片转为Bitmap
                 Bitmap resBmp = BitmapFactory.decodeResource(getResources(), resourceId);
                 // 将该Bitmap高斯模糊后返回到resBlurBmp

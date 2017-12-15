@@ -16,14 +16,14 @@ import code.ryan.travelalbumapp.R;
  * Created by RyanLee on 2017/12/7.
  */
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyHolder> {
-    private final String TAG = "RecyclerAdapter";
+public class MainGalleryAdapter extends RecyclerView.Adapter<MainGalleryAdapter.MyHolder> {
+    private final String TAG = "MainGalleryAdapter";
     private Context mContext;
     private List<Integer> mDatas;
     private ViewGroup mParent;
 
 
-    public RecyclerAdapter(Context mContext, List<Integer> mDatas) {
+    public MainGalleryAdapter(Context mContext, List<Integer> mDatas) {
         this.mContext = mContext;
         this.mDatas = mDatas;
     }
