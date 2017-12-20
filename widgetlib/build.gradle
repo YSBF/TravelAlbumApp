@@ -35,7 +35,7 @@ dependencies {
     compile "com.facebook.fresco:animated-webp:${version_fresco}"    // 支持Webp动态图
     compile "com.facebook.fresco:webpsupport:${version_fresco}"      // 支持Webp静态图
 
-    compile 'com.ryan.rv_gallery:rv-gallery:1.0.3'
+    compile 'com.ryan.rv_gallery:rv-gallery:1.0.4'
 
     implementation 'jp.wasabeef:blurry:2.1.1'                        // 高斯模糊
 
