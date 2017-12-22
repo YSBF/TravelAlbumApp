@@ -95,13 +95,6 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
 
     private void initToolbar() {
         setSupportActionBar(mToolbar);
-/*
-        // 让背景图片穿透Toolbar和状态栏
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        // 设置Toolbar的marginTop属性值为状态栏的高度
-        LinearLayout.LayoutParams param = (LinearLayout.LayoutParams) mToolbar.getLayoutParams();
-        param.setMargins(0, DimensionUtil.getStatusBarHeight(getApplicationContext()), 0, 0);
-        mToolbar.setLayoutParams(param);*/
     }
 
     private void initDrawer() {
