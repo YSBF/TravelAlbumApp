@@ -15,7 +15,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.ryan.rv_gallery.AnimManager;
@@ -31,7 +30,7 @@ import code.ryan.travelalbumapp.business.main.MainGalleryAdapter;
 import code.ryan.travelalbumapp.business.main.presenter.IMainPresenter;
 import code.ryan.travelalbumapp.business.main.presenter.MainpresenterImpl;
 import code.ryan.travelalbumapp.test.MainTest;
-import code.screen.DimensionUtil;
+import code.screen.StatusBarUtils;
 
 public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implements IMainView, NavigationView.OnNavigationItemSelectedListener {
     private Toolbar mToolbar;
@@ -55,34 +54,11 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
     @Override
     public void initActivity(Bundle savedInstanceState) {
         findView();
+        initStatusBar();
         initToolbar();
         initDrawer();
         initNavigationMenu();
         setUpGallery();
-    }
-
-    private void setUpGallery() {
-        MainGalleryAdapter adapter = new MainGalleryAdapter(getApplicationContext(), MainTest.getDatas(this));
-        mGallery.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        mGallery.setAdapter(adapter);
-
-        mGallery.initFlingSpeed(5000)                                   // 设置滑动速度（像素/s）
-                .initPageParams(10, 40)     // 设置页边距和左右图片的可见宽度，单位dp
-                .setAnimFactor(0f)                                   // 设置切换动画的参数因子
-                .setAnimType(AnimManager.ANIM_BOTTOM_TO_TOP);           // 设置切换动画类型，目前有AnimManager.ANIM_BOTTOM_TO_TOP和目前有AnimManager.ANIM_TOP_TO_BOTTOM
-
-        // 背景高斯模糊 & 淡入淡出
-        mGallery.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-
-                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    setBlurImage();
-                }
-            }
-        });
-        setBlurImage();
     }
 
     private void findView() {
@@ -114,8 +90,36 @@ public class MainActivity extends BaseActivity<IMainView, IMainPresenter> implem
         // 设置NavigationBar按钮的颜色
         //mNavigationView.setItemIconTintList(csl);
         mNavigationView.setItemIconTintList(null);
-
     }
+
+    private void setUpGallery() {
+        MainGalleryAdapter adapter = new MainGalleryAdapter(getApplicationContext(), MainTest.getDatas(this));
+        mGallery.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        mGallery.setAdapter(adapter);
+
+        mGallery.initFlingSpeed(5000)                                   // 设置滑动速度（像素/s）
+                .initPageParams(10, 40)     // 设置页边距和左右图片的可见宽度，单位dp
+                .setAnimFactor(0f)                                   // 设置切换动画的参数因子
+                .setAnimType(AnimManager.ANIM_BOTTOM_TO_TOP);           // 设置切换动画类型，目前有AnimManager.ANIM_BOTTOM_TO_TOP和目前有AnimManager.ANIM_TOP_TO_BOTTOM
+
+        // 背景高斯模糊 & 淡入淡出
+        mGallery.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    setBlurImage();
+                }
+            }
+        });
+        setBlurImage();
+    }
+
+    private void initStatusBar() {
+        StatusBarUtils.setStatusAlphaForDrawer(this, mDrawer, mToolbar, 0);
+    }
+
 
     /**
      * 设置背景高斯模糊

@@ -8,9 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- MainActivity的样式  在Android 4.4之前的版本上运行，直接跟随系统主题 -->
-    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar" />
-
     <!-- ToolBar菜单样式 -->
     <style name="ToolbarTheme" parent="AppTheme">
 
