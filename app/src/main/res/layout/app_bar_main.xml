@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_test2"
-    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -12,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="81dp"
         android:background="?attr/colorPrimary"
-        android:fitsSystemWindows="true"
         android:theme="@style/ToolbarTheme" />
 
     <include layout="@layout/content_main" />
